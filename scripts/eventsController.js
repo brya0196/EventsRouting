@@ -32,7 +32,7 @@ module.exports.getAll = function(req, res) {
     }
     results = results.substr(0, results.length - 1);
     results += "]";
-    console.log(results);
+
     res.setHeader('Content-Type', 'application/json');
     res.send(results);
     res.end();
