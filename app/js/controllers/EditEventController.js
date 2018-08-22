@@ -1,9 +1,6 @@
 'use strict';
 
-eventsApp.controller("EditEventController", 
-  function EditEventController($scope, eventData) {
-
-
+eventsApp.controller("EditEventController", function EditEventController($scope, eventData, $location) {
     $scope.saveEvent = function(event, newEventForm) {
       if(newEventForm.$valid) {
         eventData.save(event)
@@ -14,7 +11,7 @@ eventsApp.controller("EditEventController",
     };
 
     $scope.cancelEdit = function() {
-      window.location = "#/"
+      $location.url("/");
     };
   }
 );
