@@ -10,12 +10,10 @@
         <p ng-show="newEventForm.eventDate.$invalid && newEventForm.eventDate.$dirty">Has to write a name of the event</p>
 
         <label for="eventDate">Event Data:</label>
-        <input id="eventDate" type="text" name="eventDate" required ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="event.date" placeholder="format [mm/dd/yyyy]..."/>
-        <p ng-show="newEventForm.eventDate.$invalid && newEventForm.eventDate.$dirty">The format has to be mm/dd/yyyy</p>
+        <input id="eventDate" type="text" date-keys required ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="event.date" placeholder="format (mm/dd/yyyy)..." />
 
         <label for="eventTime">Event Time:</label>
-        <input id="eventTime" type="text" name="eventTime" required ng-pattern="/^(?:(?:1[0-2]|0?[1-9]):[0-5]\d\s*[AaPp][Mm])?$/" ng-model="event.time" placeholder="star and end time..."/>
-        <p ng-show="newEventForm.eventTime.$invalid && newEventForm.eventTime.$dirty">The format has to be hh:mm PM or AM</p>
+        <input id="eventTime" type="text" required ng-pattern="/^(?:(?:1[0-2]|0?[1-9]):[0-5]\d\s*[AaPp][Mm])?$/" ng-model="event.time" placeholder="star and end time..."/>
 
         <label for="eventLocation">Event Location:</label>
         <input id="eventLocation" type="text" ng-model="event.location.address" placeholder="Adress of event.."/>
