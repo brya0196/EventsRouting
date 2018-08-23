@@ -29,8 +29,14 @@ var eventsApp = angular.module('eventsApp', ['ngResource', 'ngRoute'])
       templateUrl: 'templates/EditProfile.html',
       controller: 'EditProfileController'
     });
+
     $routeProvider.when('/about', {
       template: 'About this'
+    });
+
+    $routeProvider.when('/sampleDirective', {
+      templateUrl: 'templates/SampleDirective.html',
+      controller: 'SampleDirectiveController'
     });
 
     $routeProvider.otherwise({ redirectTo: '/events' });
