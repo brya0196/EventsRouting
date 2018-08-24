@@ -9,9 +9,11 @@
         <input id="eventName" type="text" name="eventName" required ng-model="event.name" placeholder="Name of you event...."/>
         <p ng-show="newEventForm.eventDate.$invalid && newEventForm.eventDate.$dirty">Has to write a name of the event</p>
 
-        <label for="eventDate">Event Data:</label>
-        <input id="eventDate" type="text" date-keys required ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="event.date" placeholder="format (mm/dd/yyyy)..." />
-
+        <label for="eventDate">Event Date:</label>
+        <div style="position: relative;">
+            <input id="eventDate" type="text" date-keys required ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="event.date" placeholder="format (mm/dd/yyyy)..." />
+            <date-picker for="eventDate" />
+        </div>
         <label for="eventTime">Event Time:</label>
         <input id="eventTime" type="text" required ng-pattern="/^(?:(?:1[0-2]|0?[1-9]):[0-5]\d\s*[AaPp][Mm])?$/" ng-model="event.time" placeholder="star and end time..."/>
 
